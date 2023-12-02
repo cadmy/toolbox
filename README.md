@@ -21,6 +21,7 @@ To launch project, create toolbox database and pass connection string, db user a
 ## N+1 problem
 
 * No @Query
+
 `select b1_0.id,b1_0.name,b1_0.place from box b1_0 where b1_0.id=?`
 
 `select t1_0.box_id,t1_0.id,case when t1_1.id is not null then 1 when t1_2.id is not null then 2 when t1_0.id is not null then 0 end,t1_0.height,t1_0.length,t1_0.quantity,t1_0.weight,t1_0.width,t1_1.type,t1_2.size from tool t1_0 left join screwdriver t1_1 on t1_0.id=t1_1.id left join wrench t1_2 on t1_0.id=t1_2.id where t1_0.box_id=?`
