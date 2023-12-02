@@ -28,6 +28,6 @@ To launch project, create toolbox database and pass connection string, db user a
 `select f1_0.box_id,f1_0.id,f1_0.country,f1_0.name from food f1_0 where f1_0.box_id=?`
 
 * With @Query
-* 
+
 `select b1_0.id,f1_0.box_id,f1_0.id,f1_0.country,f1_0.name,b1_0.name,b1_0.place,t1_0.box_id,t1_0.id,case when t1_1.id is not null then 1 when t1_2.id is not null then 2 when t1_0.id is not null then 0 end,t1_0.height,t1_0.length,t1_0.quantity,t1_0.weight,t1_0.width,t1_1.type,t1_2.size from box b1_0 left join (tool t1_0 left join screwdriver t1_1 on t1_0.id=t1_1.id left join wrench t1_2 on t1_0.id=t1_2.id) on b1_0.id=t1_0.box_id left join food f1_0 on b1_0.id=f1_0.box_id where b1_0.id=?`
 
