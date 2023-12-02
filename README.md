@@ -1,17 +1,19 @@
-Demo project to play with JPA, Spring Data, Hibernate
+# Demo project to play with JPA, Spring Data, Hibernate
 
-We have a box with tools and materials.
-Tool has child entities screwdriver and wrench.
+We have a box with tools and materials. Tool has child entities screwdriver and wrench.
 
-@Transactional
-    - isolation
-    - propagation
+**@Transactional**
+* isolation
+* propagation
 
-N+1 problem
+**N+1 problem**
 
-Inheritance strategies
+**Inheritance strategies**
 
-To launch project, create toolbox database and pass connection string, db user and db password as environment variables
-POSTGRES_URL=jdbc:postgresql://localhost:5432/toolbox;
-POSTGRES_PASSWORD=pass;
-POSTGRES_USERNAME=postgres
+To launch project, create toolbox database and pass connection string, db user and db password as environment variables.
+
+`POSTGRES_URL=jdbc:postgresql://localhost:5432/toolbox;`
+
+`POSTGRES_PASSWORD=pass;`
+
+`POSTGRES_USERNAME=postgres;`
